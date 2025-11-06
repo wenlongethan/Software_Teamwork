@@ -141,17 +141,8 @@ Everyone cook a dishes and take a beautiful photo of it!
 
 ### 🔹 Run Frontend (Static Version)
 
-Open `frontend/public/index.html` directly in your browser.
+Open `https://wenlongethan.github.io/Software_Teamwork/` directly in your browser.
 
-### 🔹 Run Backend (Flask Example)
-
-```bash
-cd backend
-python app.py
-
-```
-
-Then open: [http://127.0.0.1:5001/api/menu](http://127.0.0.1:5000/api/menu)
 
 ---
 
