@@ -1,7 +1,9 @@
 # Software_Teamwork
-**build a nice restaurant system
-**Version 1.0 Until 5th Nov
-**This is just a temporary plan to help us organize our progress and responsibilities for now.
+build a nice restaurant system.
+
+Version 1.0 Until 5th Nov
+
+This is just a temporary plan to help us organize our progress and responsibilities for now.
 We’ll review and update it together next week once we have more clarity on each person’s part.
 
 ```markdown
