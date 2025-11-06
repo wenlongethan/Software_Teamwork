@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News Center - Taste the Food</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap topbar">
+    <div class="logo"><a href="index.html">LOGO</a></div>
+    <div class="auth-links">
+      You are not logged in |
+      <a href="login.html">Login</a> |
+      <a href="register.html">Register</a> |
+      <a href="help.html">Help</a>
+    </div>
+  </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html" class="active">News Center</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="restaurant.html">Online Restaurant</a></li>
+        <li><a href="jobs.html">Careers</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="hamburger">☰</div>
+    </div>
+  </nav>
+</header>
+
+<main class="main">
+  <div class="wrap" style="padding:28px 20px;">
+    <h1>News Center</h1>
+    <p>This page lists news items pulled from the backend. Example below uses a placeholder list which can be replaced by API data.</p>
+
+    <section class="panel" style="margin-top:20px;">
+      <h3>Latest News</h3>
+      <ul class="list" id="news-page-list">
+        <li>Loading...</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="news.html">News Center</a> |
+      <a href="products.html">Products</a> |
+      <a href="restaurant.html">Online Restaurant</a> |
+      <a href="jobs.html">Careers</a> |
+      <a href="downloads.html">Downloads</a> |
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div>Copyright © 2009–2025 TasteFood Co., Ltd.</div>
+  </div>
+</footer>
+
+<script>
+  // Optionally fetch additional data for news page
+  async function loadNewsPage() {
+    try {
+      const res = await fetch('/api/news'); // replace with your real API
+      const data = await res.json();
+      const el = document.getElementById('news-page-list');
+      el.innerHTML = data.map(item =>
+        `<li><strong>${item.title}</strong><div class="news-date">${item.date}</div><div>${item.summary || ''}</div></li>`
+      ).join('');
+    } catch (err) {
+      console.error('Failed to load news:', err);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', loadNewsPage);
+</script>
+</body>
+</html>
