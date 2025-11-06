@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Online Restaurant - Taste the Food</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap topbar">
+    <div class="logo"><a href="index.html">LOGO</a></div>
+    <div class="auth-links">
+      You are not logged in |
+      <a href="login.html">Login</a> |
+      <a href="register.html">Register</a> |
+      <a href="help.html">Help</a>
+    </div>
+  </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">News Center</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="restaurant.html" class="active">Online Restaurant</a></li>
+        <li><a href="jobs.html">Careers</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="hamburger">☰</div>
+    </div>
+  </nav>
+</header>
+
+<main class="main">
+  <div class="wrap" style="padding:28px 20px;">
+
+    <div class="restaurant-layout">
+      <!-- 菜单列表 -->
+      <section>
+        <h2>Menu</h2>
+        <div id="menu-container" class="menu-grid"></div>
+      </section>
+
+      <!-- 购物车 -->
+      <aside>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="show-checkout">Checkout</button>
+      </aside>
+    </div>
+
+    <!-- 结账表单 -->
+    <section id="checkout-section" style="display:none; margin-top:20px;">
+      <h2>Checkout</h2>
+      <label>
+        Name:
+        <input id="customer-name" type="text">
+      </label>
+      <label>
+        Phone:
+        <input id="customer-phone" type="text">
+      </label>
+      <button id="submit-order">Submit Order</button>
+      <p id="order-msg"></p>
+    </section>
+
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="news.html">News Center</a> |
+      <a href="products.html">Products</a> |
+      <a href="restaurant.html">Online Restaurant</a> |
+      <a href="jobs.html">Careers</a> |
+      <a href="downloads.html">Downloads</a> |
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div>© 2009–2025 TasteFood Co., Ltd.</div>
+  </div>
+</footer>
+
+<script src="../assets/js/restaurant.js"></script>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
