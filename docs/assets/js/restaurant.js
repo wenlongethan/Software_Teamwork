@@ -15,7 +15,7 @@ let cart = []; // {menu_id, name, price, qty}
 // 1. 加载菜单并渲染
 fetch(`${API_BASE}/api/menu`)
   .then(res => res.json())
-  .then(data => {
+  .then(data => {a
     renderMenu(data);
   })
   .catch(err => {
